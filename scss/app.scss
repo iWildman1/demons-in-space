@@ -1,0 +1,170 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+@include foundation-accordion;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-close-button;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-flex-video;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-menu;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Regular.otf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Light.otf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Semibold.otf);
+  font-weight: 500;
+}
+
+body {
+  font-family: Montserrat;
+  background-color: #F0F0F0;
+}
+
+.top-bar {
+  background-color: transparent;
+
+  .menu {
+    padding-top: 30px;
+    background-color: transparent;
+    font-family: Montserrat;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+
+    a {
+      color: white;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #E02411;
+      }
+    }
+  }
+}
+
+header {
+  background: url("../img/websitebackground.png") no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
+
+  h1 {
+    color: white;
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-weight: 500;
+    margin-top: 50px;
+    font-size: 56px;
+    letter-spacing: -2px;
+  }
+
+  p {
+    margin-top: 30px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 36px;
+    font-weight: 300;
+
+    strong {
+      font-weight: 300;
+      color: #E02411;
+    }
+  }
+}
+
+#header-image {
+  margin-top: 30px;
+}
+
+.button {
+  margin-top: 5vh;
+  margin-bottom: 40px;
+  border-radius: 45px;
+  border: 2px solid #E02411;
+  background-color: transparent;
+  color: #E02411;
+  text-transform: uppercase;
+  font-size: 24px;
+
+  &:hover {
+    color: #E02411;
+    background-color: transparent;
+  }
+}
+
+.mission {
+  background-color: #F0F0F0;
+  text-align: center;
+
+  p {
+    margin-top: 20px;
+    color: #4A4A4A;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 300;
+  }
+}
+
+.mission-row {
+  width: 75%;
+}
+
+hr {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  background-color: #F0F0F0;
+}
+
+h2 {
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 300;
+  color: #4A4A4A;
+  padding-top: 40px;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
