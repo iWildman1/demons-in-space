@@ -219,3 +219,25 @@ footer {
 .info-row {
   margin-bottom: 30px;
 }
+
+.valign-middle {
+  display:table;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.valign-middle .columns {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  .button {
+    font-size: 20px;
+  }
+}
+
+.valign-middle .columns,
+.valign-middle [class*="column"] + [class*="column"]:last-child {
+    float: none;
+}
