@@ -117,6 +117,14 @@ header {
   }
 }
 
+.secondary-h1 {
+  margin-top: 25px;
+}
+
+.secondary-p {
+  margin-top: 15px;
+}
+
 #header-image {
   margin-top: 30px;
 }
@@ -135,6 +143,15 @@ header {
     color: #E02411;
     background-color: transparent;
   }
+
+  &:active {
+    background-color: transparent;
+  }
+}
+
+.secondary-button {
+  font-size: 20px;
+  margin-top: 2.5vh;
 }
 
 .mission {
@@ -197,4 +214,8 @@ footer {
       padding-left: 20px;
     }
   }
+}
+
+.info-row {
+  margin-bottom: 30px;
 }
