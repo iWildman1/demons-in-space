@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demons in Space</title>
     <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/sweetalert.css">
+    <script src="http://www.parsecdn.com/js/parse-1.6.14.min.js"></script>
   </head>
   <body>
     <header>
@@ -14,8 +16,8 @@
           <div class="top-bar-right">
             <ul class="menu">
               <li><a href="../index.html">Home</a></li>
-              <li><a href="../vote/index.html">Vote</a></li>
-              <li><a href="#" style="color: #E02411;">More Info</a></li>
+              <li><a href="#" style="color: #E02411;">Vote</a></li>
+              <li><a href="../info/index.html">More Info</a></li>
               <li><a href="http://uk.virginmoneygiving.com/fundraiser-web/fundraiser/showFundraiserPage.action;jsessionid=Zp3HBmKvofOJyhDAiDzbc5EG.lgvappprod1:server-one?userUrl=demonmedia&faId=665073&isTeam=true">Donate</a></li>
             </ul>
           </div>
@@ -34,14 +36,14 @@
     <section class="mission">
       <div class="row">
         <div class="small-12 columns">
-          <h2>More Information</h2>
+          <h2>A bit of history...</h2>
         </div>
       </div>
       <div class="row mission-row">
         <div class="small-12 columns">
-          <p>On the 23rd of February, Demon Media will embark on its biggest fundraiser to date: Demons In Space. Following on from raising over £4500 in the past 2 years, Demon Media is set to begin a 48 hour live broadcast across DemonFM and Demon TV. The broadcast will bring together 10 pairs of Demon Media members who will all be locked in a room for the duration of the event. The candidates will undertake challenges to get rewards before evictions start to decide the winning pair of contestants.
-<br><br>
-The broadcast will follow the narrative that members of Demon Media were sent into space to create a next-gen sci-fi show, pushing the boundaries of student media content. However, the ship’s engines and long range transmitter got damaged and contact was lost, with it drifting towards earth. Further updates are expected on the 23rd Feb, when the short range transmitter will come into broadcast range. On their journey the team will undoubtedly have to overcome certain challenges. It’s believed that the closer to Earth the ship gets, more members will have to leave in the ship’s escape pods due to damage to the oxygen tanks.</p>
+          <p>On 7th December 2015, 20 brave Demons went into Space in order to achieve a classified mission. I need help writing this bit, I websiteded too hard.<br><br>
+            <strong class="strong-info">Click on a team to register your vote. It's that simple!</strong>
+          </p>
         </div>
       </div>
       <hr></hr>
@@ -49,18 +51,49 @@ The broadcast will follow the narrative that members of Demon Media were sent in
     <section class="mission">
       <div class="row">
         <div class="small-12 columns">
-          <h2>Voting and Donating</h2>
+          <h2>The Crew</h2>
         </div>
       </div>
       <div class="row mission-row info-row">
         <div class="small-12 columns">
-          <p>The natural progression of the Demons in Space narrative involves crew teams being evicted from the spacecraft. This is where you come in - the team with the least votes for that particular voting period is the team that will leave the spacecraft. This means that your votes are very important - They control the direction of the narrative!
-<br><br>
-Naturally, with such a situation, there has to be ground rules. We tried to keep this as simple as possible, so here goes - you can only vote once per 15 minutes. Once that period is up, you may freely vote again. Simple!
-<br><br>
-As this is a charity event, we are aiming to raise as much money as possible for both Macmillan Cancer Support and FOCUS. The donations do not affect the narrative in any way, but if you’re enjoying the event and want to show your support, then please donate and support these incredible charities.
-
-</p>
+          <div class="row crew-row">
+            <div class="small-12 medium-4 columns">
+              <img  class="pointer-mouse" src="../img/team1.jpg" onclick="addVote('Person 1 & Person 2')">
+            </div>
+            <div class="small-12 medium-4 columns">
+              <img class="pointer-mouse" src="../img/team1.jpg" onclick="addVote('Person 3 & Person 4')">
+            </div>
+            <div class="small-12 medium-4 columns">
+              <img class="pointer-mouse" src="../img/team1.jpg" onclick="addVote('Person 5 & Person 6')">
+            </div>
+          </div>
+          <div class="row crew-row">
+            <div class="small-12 medium-4 columns">
+              <img src="../img/team1.jpg">
+            </div>
+            <div class="small-12 medium-4 columns">
+              <img src="../img/team1.jpg">
+            </div>
+            <div class="small-12 medium-4 columns">
+              <img src="../img/team1.jpg">
+            </div>
+          </div>
+          <div class="row crew-row">
+            <div class="small-12 medium-4 columns">
+              <img src="../img/team1.jpg">
+            </div>
+            <div class="small-12 medium-4 columns">
+              <img src="../img/team1.jpg">
+            </div>
+            <div class="small-12 medium-4 columns">
+              <img src="../img/team1.jpg">
+            </div>
+          </div>
+          <div class="row crew-row">
+            <div class="small-12 medium-4 medium-offset-4 columns">
+              <img src="../img/team1.jpg">
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -82,6 +115,8 @@ As this is a charity event, we are aiming to raise as much money as possible for
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/what-input/what-input.js"></script>
     <script src="../bower_components/foundation-sites/dist/foundation.js"></script>
+    <script src="../js/sweetalert.min.js"></script>
     <script src="../js/app.js"></script>
+    <script src="../js/parseFunctions.js"></script>
   </body>
 </html>

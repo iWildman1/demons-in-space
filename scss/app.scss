@@ -241,3 +241,11 @@ footer {
 .valign-middle [class*="column"] + [class*="column"]:last-child {
     float: none;
 }
+
+.pointer-mouse {
+  cursor: pointer;
+}
+
+.strong-info {
+  font-weight: 500;
+}

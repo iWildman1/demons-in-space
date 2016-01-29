@@ -8,10 +8,15 @@ $(document).ready(function() {
     url: "https://api.ipify.org?format=json",
     success: function(result) {
       IPAddress = result.ip;
-      votingEnabled = false;
+
+      if (IPAddress === undefined) {
+        votingEnabled = false;
+        console.log("Failed to obtain IP Address. Voting disabled.")
+      }
     },
     error: function() {
       console.log("Failed to retrieve IP. Voting disabled.");
+      votingEnabled = false;
     }
   });
 });
@@ -44,7 +49,7 @@ function addVote(teamName) {
             swal("Success!", "Your vote has been counted!", "success");
           },
           error: function(error) {
-            swal("Something went wrong", "Either you have already voted, or an eviction is taking place. Please try again later", "error");
+            swal("Woah there!", "You can only vote once every 15 minutes. Come back soon!", "error");
           }
         });
       } else {
