@@ -66,6 +66,10 @@ body {
   margin-bottom: 0;
 }
 
+.off-canvas-content {
+  background-color: #F0F0F0;
+}
+
 .top-bar {
   background-color: transparent;
 
@@ -168,13 +172,14 @@ header {
 }
 
 .mission-row {
-  width: 75%;
+  width: 85%;
 }
 
 hr {
   margin-top: 60px;
   margin-bottom: 20px;
   background-color: #F0F0F0;
+  width: 65%;
 }
 
 h2 {
@@ -195,6 +200,10 @@ h2 {
   }
 }
 
+.footer-row {
+  width: 85%;
+}
+
 footer {
   background-color: #1B1E25;
   height: 80px;
@@ -212,6 +221,14 @@ footer {
     li {
       display: inline;
       padding-left: 20px;
+    }
+
+    a {
+      color: white;
+
+      &:hover {
+        color: #E02411;
+      }
     }
   }
 }
@@ -248,4 +265,142 @@ footer {
 
 .strong-info {
   font-weight: 500;
+}
+
+@media screen and (max-width: 850px) {
+  footer {
+    ul {
+      font-size: 14px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 757px) {
+  footer {
+    ul {
+      font-size: 12px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .hamburger-menu {
+    display: none;
+  }
+
+  .teams-small-info {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+
+  .off-canvas-wrapper {
+    background-color: #1B1E25;
+  }
+
+  #offCanvas {
+    background-color: #1B1E25;
+
+    li {
+      list-style: none;
+      margin-top: 30px;
+    }
+
+    a {
+      color: white;
+      text-transform: uppercase;
+      font-size: 18px;
+    }
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .hamburger-menu {
+    float: left;
+    padding: 10px 30px;
+    width: 90px;
+    background-color: transparent;
+  }
+
+  #header-image {
+    margin-top: 25px;
+    width: 90%;
+  }
+
+  #transmission-title {
+    font-size: 35px;
+    margin-top: 20px;
+  }
+
+  #counters {
+    font-size: 25px;
+    margin-top: 20px;
+  }
+
+  .button {
+      font-size: 17px;
+  }
+
+  .section-header {
+    font-size: 30px;
+  }
+
+  #crew-header {
+    padding-top: 0;
+  }
+
+  .mission {
+
+    .mission-row {
+      width: 85%;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .rule {
+    width: 60%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  img {
+    margin-top: 20px;
+  }
+
+  .row {
+    margin-top: 0;
+  }
+
+  footer {
+    text-align: center;
+    height: 40px;
+    padding-top: 10px;
+
+    ul {
+      display: none;
+    }
+
+    .float-override-small {
+      float: none !important;
+      font-size: 14px;
+    }
+  }
+
+  .valign-middle {
+    display: none;
+  }
 }
