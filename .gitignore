@@ -26,3 +26,5 @@ Temporary Items
 .apdisk
 bower_components
 node_modules
+
+wp-config.php
