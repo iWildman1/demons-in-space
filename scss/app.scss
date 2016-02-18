@@ -60,6 +60,12 @@
   font-weight: 500;
 }
 
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Hairline.otf);
+  font-weight: 200;
+}
+
 body {
   font-family: Montserrat;
   background-color: #F0F0F0;
@@ -402,5 +408,181 @@ footer {
 
   .valign-middle {
     display: none;
+  }
+}
+
+.admin-body {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/loginback.jpeg");
+  background-size: cover;
+  position: relative;
+  font-weight: 300;
+}
+
+.admin-body:after {
+  position: absolute;
+  display: block;
+  content: " ";
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.row-center {
+  position: relative;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  margin: 0;
+
+  .admin-vector {
+    width: 60%;
+    height: 60%;
+  }
+
+  input[type='text'], input[type="password"] {
+    margin-top: 40px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    border-bottom: 1px solid white;
+    opacity: 0.7;
+    box-shadow: none;
+
+    &::placeholder {
+      color: white;
+    }
+  }
+
+  input[type="password"] {
+    margin-top: 20px;
+  }
+
+  .login-button {
+    text-transform: none;
+    border: none;
+    color: white;
+    opacity: 0.7;
+    font-size: 18px;
+  }
+}
+
+.main-admin-body {
+  background-color: #EDEDED;
+}
+
+.admin-left-nav {
+  width: 250px;
+  height: 100%;
+  background-color: #515058;
+  position: fixed;
+
+  ul {
+    margin-left: 0;
+    margin-top: 40px;
+    color: white;
+    font-weight: 300;
+    font-size: 16px;
+
+    text-align: center;
+    li {
+      list-style: none;
+      margin: 30px 20px 0 20px;
+      padding: 10px 0;
+    }
+  }
+
+  .admin-nav-active {
+    background-color: #36353B;
+    border-radius: 10px;
+  }
+}
+
+.admin-left-logo-holder {
+  background-color: #C7554F;
+  padding: 20px;
+  padding-bottom: 10px;
+  color: white;
+
+  h6 {
+    margin-top: 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 24px;
+    letter-spacing: -1px;
+  }
+}
+
+.admin-main-body {
+  margin-left: 250px;
+
+  .row {
+    max-width: 90%;
+  }
+
+  h1 {
+    margin-top: 50px;
+    font-size: 48px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  .admin-table-row {
+    margin-top: 5%;
+
+    table {
+      width: 100%;
+
+
+      thead {
+        background-color: #36353B;
+        text-align: center;
+        font-size: 14px;
+        color: white;
+
+        th {
+          text-align: center;
+          font-weight: 400;
+          border-right: 1px solid white;
+
+          &:first-child {
+            border-top-left-radius: 10px;
+          }
+
+          &:last-child {
+            border-top-right-radius: 10px;
+            border-right: none;
+          }
+        }
+      }
+
+      tbody {
+        background-color: #D8D8D8;
+        font-size: 14px;
+
+        td {
+          text-align: center;
+          font-weight: 300;
+          border-right: 1px solid white;
+
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+    }
   }
 }

@@ -61,3 +61,25 @@ function addVote(teamName) {
     }
   });
 };
+
+$(document).ready(function() {
+  $('.admin-login-form').submit(function(e) {
+    e.preventDefault();
+
+    var loginInfo = $(this).serializeArray();
+    var username = loginInfo[0].value;
+    var password = loginInfo[1].value;
+
+    console.log("Logging in with credentials " + username + " and " + password);
+
+    Parse.User.logIn(username, password, {
+      success: function(user) {
+        console.log("Logged in " + user + "successfully");
+        window.location.replace("dashboard/index.html");
+      },
+      error: function() {
+        console.log("Login failed.");
+      }
+    })
+  });
+});
