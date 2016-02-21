@@ -103,3 +103,67 @@ function performLogin(loginInfo) {
     }
   })
 }
+
+function newHistoryPhase(phaseName) {
+  var phaseData = [];
+  var Teams = Parse.Object.extend("Teams");
+
+  var teamQuery = new Parse.Query(Teams);
+
+  teamQuery.descending("eventTotal");
+
+  teamQuery.find({
+    success: function(data) {
+      for (var i = 0; i < data.length; i++) {
+        var singleTeam = {
+          'teamName': data[i].get("teamName"),
+          'rank': i + 1
+        }
+
+        phaseData[i] = singleTeam;
+      }
+
+      saveHistoryBlock(phaseData, phaseName);
+    },
+    error: function() {
+      console.log("Could not retrieve team data.");
+    }
+  })
+}
+
+function saveHistoryBlock(phaseData, phaseName) {
+  var HistoryBlock = Parse.Object.extend("HistoryBlock");
+
+  var historyBlock = new HistoryBlock;
+
+  historyBlock.set("historyData", phaseData);
+  historyBlock.set("phaseName", phaseName);
+
+  historyBlock.save(null, {
+    success: function(data) {
+      console.log("Saved history info");
+    },
+    error: function() {
+      console.log("Failed to save");
+    }
+  });
+}
+
+function getPhaseHistory() {
+  var HistoryBlock = Parse.Object.extend("HistoryBlock");
+
+  var query = new Parse.Query(HistoryBlock);
+
+  query.find({
+    success: function(data) {
+      var history = data[0].get("historyData");
+
+      for (var i = 0; i < history.length; i++) {
+        console.log("Team Name: " + history[i].teamName + ". Rank: " + history[i].rank);
+      }
+    },
+    error: function() {
+      console.log("An error has occurred");
+    }
+  })
+}
