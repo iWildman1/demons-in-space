@@ -5,34 +5,34 @@
     <meta charset="utf-8" />
     <title>Vulcan - Demons in Space Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel="apple-touch-icon" href="pages/ico/60.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="pages/ico/76.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="pages/ico/120.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="pages/ico/152.png">
+    <link rel="apple-touch-icon" href="../pages/ico/60.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../pages/ico/76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../pages/ico/120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../pages/ico/152.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta content="" name="description" />
     <meta content="" name="author" />
     <!-- BEGIN Vendor CSS-->
-    <link href="assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/boostrapv3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
-    <link href="assets/plugins/bootstrap-select2/select2.css" rel="stylesheet" type="text/css" media="screen" />
-    <link href="assets/plugins/switchery/css/switchery.min.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/boostrapv3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../assets/plugins/bootstrap-select2/select2.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../assets/plugins/switchery/css/switchery.min.css" rel="stylesheet" type="text/css" media="screen" />
     <!-- BEGIN Pages CSS-->
-    <link href="pages/css/pages-icons.css" rel="stylesheet" type="text/css">
-    <link class="main-stylesheet" href="pages/css/pages.css" rel="stylesheet" type="text/css" />
+    <link href="../pages/css/pages-icons.css" rel="stylesheet" type="text/css">
+    <link class="main-stylesheet" href="../pages/css/pages.css" rel="stylesheet" type="text/css" />
     <!--[if lte IE 9]>
-        <link href="pages/css/ie9.css" rel="stylesheet" type="text/css" />
+        <link href="../pages/css/ie9.css" rel="stylesheet" type="text/css" />
     <![endif]-->
     <script type="text/javascript">
     window.onload = function()
     {
       // fix for windows 8
       if (navigator.appVersion.indexOf("Windows NT 6.2") != -1)
-        document.head.innerHTML += '<link rel="stylesheet" type="text/css" href="pages/css/windows.chrome.fix.css" />'
+        document.head.innerHTML += '<link rel="stylesheet" type="text/css" href="../pages/css/windows.chrome.fix.css" />'
     }
     </script>
   </head>
@@ -43,7 +43,7 @@
       </div>
       <!-- BEGIN SIDEBAR HEADER -->
       <div class="sidebar-header">
-        <img src="assets/img/dislogowhite.svg" alt="logo" class="brand" data-src="assets/img/dislogowhite.svg" width="78" height="22">
+        <img src="../assets/img/dislogowhite.svg" alt="logo" class="brand" data-src="../assets/img/dislogowhite.svg" width="78" height="22">
         <div class="sidebar-header-controls">
           <button data-pages-toggle="#appMenu" class="btn btn-xs sidebar-slide-toggle btn-link m-l-20" type="button"><i class="fa fa-angle-down fs-16"></i>
           </button>
@@ -63,11 +63,11 @@
             <span class="icon-thumbnail"><i class="pg-mail"></i></span>
             <ul class="sub-menu">
               <li class="">
-                <a href="#">Current Phase</a>
+                <a href="../">Current Phase</a>
                 <span class="icon-thumbnail">CP</span>
               </li>
               <li class="">
-                <a href="voting/">Voting History</a>
+                <a href="#">Voting History</a>
                 <span class="icon-thumbnail">VH</span>
               </li>
             </ul>
@@ -129,7 +129,7 @@
         <div class=" pull-left sm-table">
           <div class="header-inner">
             <div class="brand inline">
-              <img src="assets/img/dislogo.svg" alt="logo" data-src="assets/img/dislogo.svg" width="78" height="22">
+              <img src="../assets/img/dislogo.svg" alt="logo" data-src="../assets/img/dislogo.svg" width="78" height="22">
             </div>
             <!-- BEGIN NOTIFICATION DROPDOWN -->
             <ul class="notification-list no-margin hidden-sm hidden-xs b-grey b-l b-r no-style p-l-30 p-r-20">
@@ -250,12 +250,23 @@
           <!-- START CONTAINER FLUID -->
           <div class="container-fluid container-fixed-lg">
             <!-- BEGIN PlACE PAGE CONTENT HERE -->
-            <h3 class="page-title">Current Session Info</h3>
+            <h3 class="page-title">Voting History</h3>
             <div class="panel panel-transparent">
               <div class="panel-heading">
-                <div class="panel-title">Remaining Teams
+                <div class="panel-title" id="votingTableTitle">Showing Voting History from Loading...
                 </div>
-
+                <div class="btn-group pull-right m-b-10">
+                  <select class="cs-select cs-skin-slide" id="phaseSelector">
+                    <option value="nodata" class="phaseOption">None</option>
+                    <option value="Phase 1">Phase 1</option>
+                  </select>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Settings</a>
+                    </li>
+                    <li><a href="#">Help</a>
+                    </li>
+                  </ul>
+                </div>
                 <div class="clearfix"></div>
               </div>
               <div class="panel-body">
@@ -266,137 +277,19 @@
                         <!-- NOTE * : Inline Style Width For Table Cell is Required as it may differ from user to user
                                         Comman Practice Followed
                                         -->
-                        <th style="width:1%">
-                          <button class="btn"><i class="fa fa-check"></i>
-                          </button>
-                        </th>
-                        <th style="width:25%">Current Position</th>
-                        <th style="width:25%">Team Name</th>
-                        <th style="width:25%">Session Votes</th>
-                        <th style="width:25%">Overall Votes</th>
+                        <th style="width:5%">Rank</th>
+                        <th>Team Name</th>
                       </tr>
                     </thead>
-                    <tbody id="dataContainer">
+                    <tbody id="votingTableBody">
                       <tr>
-                        <td class="v-align-middle">
-                          <div class="checkbox ">
-                            <input type="checkbox" value="3" id="checkbox1">
-                            <label for="checkbox1"></label>
-                          </div>
+                        <td class="v-align-middle " id="votingRank">
+                          <p>Loading...</p>
                         </td>
-                        <td class="v-align-middle ">
-                          <p>1</p>
-                        </td>
-                        <td class="v-align-middle">
-                          <p>Person 1 and Person 2</p>
-                        </td>
-                        <td class="v-align-middle">
-                          <p>128</p>
-                        </td>
-                        <td class="v-align-middle">
-                          <p>650</p>
+                        <td class="v-align-middle" id="votingName">
+                          <p>Loading...</p>
                         </td>
                       </tr>
-                      <!-- <tr>
-                        <td class="v-align-middle">
-                          <div class="checkbox ">
-                            <input type="checkbox" value="3" id="checkbox2">
-                            <label for="checkbox2"></label>
-                          </div>
-                        </td>
-                        <td class="v-align-middle ">
-                          <p>Among the children</p>
-                        </td>
-                        <td class="v-align-middle">
-                          <p>United States, India, China,Africa</p>
-                        </td>
-                        <td class="v-align-middle">
-                          <p>you want English, Scottish, Welsh, Irish, British, European or UK even a British (name other original country you came form or have roots to E.G. A British Japanese or a 5th generation</p>
-                        </td>
-                        <td class="v-align-middle">
-                          <p>Public</p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="v-align-middle">
-                          <div class="checkbox ">
-                            <input type="checkbox" value="3" id="checkbox3">
-                            <label for="checkbox3"></label>
-                          </div>
-                        </td>
-                        <td class="v-align-middle ">
-                          <p>A day to remember</p>
-                        </td>
-                        <td class="v-align-middle">
-                          <p>United States, India, China,Africa</p>
-                        </td>
-                        <td class="v-align-middle">
-                          <p>UK was on top of the art world 18-19 century had the best food, best cloths and best entertainment back then) it was a hyper nation</p>
-                        </td>
-                        <td class="v-align-middle">
-                          <p>Public</p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="v-align-middle">
-                          <div class="checkbox ">
-                            <input type="checkbox" value="3" id="checkbox4">
-                            <label for="checkbox4"></label>
-                          </div>
-                        </td>
-                        <td class="v-align-middle ">
-                          <p>Life’s sadness shared</p>
-                        </td>
-                        <td class="v-align-middle">
-                          <p>United States, India, China,Africa</p>
-                        </td>
-                        <td class="v-align-middle">
-                          <p>he world speaks English. Common law, Magna Carta and the Bill of Rights are its wonderful legacy</p>
-                        </td>
-                        <td class="v-align-middle">
-                          <p>Public</p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="v-align-middle">
-                          <div class="checkbox ">
-                            <input type="checkbox" value="3" id="checkbox5">
-                            <label for="checkbox5"></label>
-                          </div>
-                        </td>
-                        <td class="v-align-middle ">
-                          <p>First Tour</p>
-                        </td>
-                        <td class="v-align-middle">
-                          <p>United States, India, China,Africa</p>
-                        </td>
-                        <td class="v-align-middle">
-                          <p>it is more then ONE nation/nationality as its fall name is The United Kingdom of Great Britain and North Ireland..</p>
-                        </td>
-                        <td class="v-align-middle">
-                          <p>Public</p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="v-align-middle">
-                          <div class="checkbox ">
-                            <input type="checkbox" value="3" id="checkbox6">
-                            <label for="checkbox6"></label>
-                          </div>
-                        </td>
-                        <td class="v-align-middle ">
-                          <p>First Tour</p>
-                        </td>
-                        <td class="v-align-middle">
-                          <p>United States, India, China,Africa</p>
-                        </td>
-                        <td class="v-align-middle">
-                          <p>it is more then ONE nation/nationality as its fall name is The United Kingdom of Great Britain and North Ireland..</p>
-                        </td>
-                        <td class="v-align-middle">
-                          <p>Public</p>
-                        </td>
-                      </tr> -->
                     </tbody>
                   </table>
                 </div>
@@ -436,7 +329,7 @@
         <!-- BEGIN Overlay Header !-->
         <div class="container-fluid">
           <!-- BEGIN Overlay Logo !-->
-          <img class="overlay-brand" src="assets/img/dislogo.svg" alt="logo" data-src="assets/img/dislogo.svg" width="78" height="22">
+          <img class="overlay-brand" src="../assets/img/dislogo.svg" alt="logo" data-src="../assets/img/dislogo.svg" width="78" height="22">
           <!-- END Overlay Logo !-->
           <!-- BEGIN Overlay Close !-->
           <a href="#" class="close-icon-light overlay-close text-black fs-16">
@@ -469,30 +362,29 @@
     <!-- END OVERLAY -->
     <!-- BEGIN VENDOR JS -->
     <script src="http://www.parsecdn.com/js/parse-1.6.14.min.js"></script>
-    <script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/modernizr.custom.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/boostrapv3/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery/jquery-easy.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery-bez/jquery.bez.min.js"></script>
-    <script src="assets/plugins/jquery-ios-list/jquery.ioslist.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/plugins/jquery-actual/jquery.actual.min.js"></script>
-    <script src="assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="../assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+    <script src="../assets/plugins/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="../assets/plugins/modernizr.custom.js" type="text/javascript"></script>
+    <script src="../assets/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="../assets/plugins/boostrapv3/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../assets/plugins/jquery/jquery-easy.js" type="text/javascript"></script>
+    <script src="../assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
+    <script src="../assets/plugins/jquery-bez/jquery.bez.min.js"></script>
+    <script src="../assets/plugins/jquery-ios-list/jquery.ioslist.min.js" type="text/javascript"></script>
+    <script src="../assets/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="../assets/plugins/jquery-actual/jquery.actual.min.js"></script>
+    <script src="../assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 
     </script>
     <!-- END VENDOR JS -->
     <!-- BEGIN CORE TEMPLATE JS -->
-    <script src="pages/js/pages.js" type="text/javascript"></script>
+    <script src="../pages/js/pages.js" type="text/javascript"></script>
     <!-- END CORE TEMPLATE JS -->
     <!-- BEGIN PAGE LEVEL JS -->
-    <script src="assets/js/scripts.js" type="text/javascript"></script>
+    <script src="../assets/js/scripts.js" type="text/javascript"></script>
     <!-- END PAGE LEVEL JS -->
-    <script src="../../js/parseFunctions.js" type="text/javascript"></script>
-    <script type="text/javascript" src="admin.js"></script>
-
-    </script>
+    <script src="../../../js/parseFunctions.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../admin.js"></script>
+    <script type="text/javascript" src="history.js"></script>
   </body>
 </html>

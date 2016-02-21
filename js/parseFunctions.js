@@ -149,21 +149,26 @@ function saveHistoryBlock(phaseData, phaseName) {
   });
 }
 
-function getPhaseHistory() {
+function getPhaseHistory(phaseName) {
   var HistoryBlock = Parse.Object.extend("HistoryBlock");
 
   var query = new Parse.Query(HistoryBlock);
 
+  query.equalTo("phaseName", phaseName);
+
   query.find({
     success: function(data) {
       var history = data[0].get("historyData");
+      output = "";
 
       for (var i = 0; i < history.length; i++) {
-        console.log("Team Name: " + history[i].teamName + ". Rank: " + history[i].rank);
+        output += '<tr><td class="v-align-middle "><p>' + history[i].rank + '</p></td><td class="v-align-middle"><p>' + history[i].teamName + '</p></td></tr>'
       }
+
+      $('#votingTableBody').html(output);
     },
     error: function() {
-      console.log("An error has occurred");
+      console.log("An error has occurred whilst finding history");
     }
   })
 }
