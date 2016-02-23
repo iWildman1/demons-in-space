@@ -4,6 +4,10 @@ function loadVirgin() {
   window.location.href = 'http://uk.virginmoneygiving.com/fundraiser-web/fundraiser/showFundraiserPage.action;jsessionid=Zp3HBmKvofOJyhDAiDzbc5EG.lgvappprod1:server-one?userUrl=demonmedia&faId=665073&isTeam=true';
 }
 
+function listenLive() {
+  window.location.href = 'http://www.demonfm.co.uk/listen';
+}
+
 var deadline = new Date('2016-02-23T11:00:00');
 
 function getTimeRemaining(deadline) {
