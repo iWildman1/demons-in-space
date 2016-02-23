@@ -34,6 +34,10 @@ function updateTime() {
   $("#counterHours").html(data.hours);
   $("#counterMinutes").html(data.minutes);
   $("#counterSeconds").html(data.seconds);
+
+  if ((data.hours == 0 && data.minutes <= 15) && $('#trasmission-title').html() != 'Transmission incoming...') {
+    $('#tranmission-title').html("Transmission incoming...");
+  }
 }
 
 updateTime();
