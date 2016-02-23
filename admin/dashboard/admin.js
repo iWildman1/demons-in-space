@@ -28,7 +28,7 @@ function getVotes() {
         output += '<tr><td class="v-align-middle"><div class="checkbox "><input type="checkbox" value="3" id="checkbox1"><label for="checkbox1"></label></div></td>';
         output += '<td class="v-align-middle"><p>' + currentPosition + '</p></td>';
         output += '<td class="v-align-middle"><p>' + data[i].get("teamName")  + '</td>';
-        output += '<td class="v-align-middle"><p>' + data[i].get("eventTotal") + '</p></td>';
+        output += '<td class="v-align-middle"><p>' + data[i].get("sessionTotal") + '</p></td>';
         output += '<td class="v-align-middle"><p>' + data[i].get("eventTotal") + '</p></td></tr>';
 
         currentPosition++;
