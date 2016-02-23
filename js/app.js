@@ -12,7 +12,6 @@ var deadline = new Date('2016-02-23T11:00:00');
 
 function getTimeRemaining(deadline) {
   var t = Date.parse(deadline) - Date.parse(new Date());
-
   var seconds = Math.floor((t/1000) % 60);
   var minutes = Math.floor((t/1000/60) % 60);
   var hours = Math.floor((t/(1000*60*60)) % 24);
