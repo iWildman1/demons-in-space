@@ -1,7 +1,7 @@
 Parse.initialize("Vpxoii1PVC5UN5TtB3tCo74L5aBKJ2QN52bvxKHr", "UWzLmztcGnF1JjuBkz8WW0UYnY02M5PTDgtAFIka");
 
 var IPAddress;
-votingEnabled = false;
+votingEnabled = true;
 
 $(document).ready(function() {
   $.ajax({
@@ -53,7 +53,7 @@ function addVote(teamName) {
           }
         });
       } else {
-        swal("Oh no!", "Voting is currently disabled. Please wait until the start of the event.", "error");
+        swal("Woah there!", "You can only vote once every 15 minutes. Come back soon!", "error");
       }
     },
     error: function(error) {
