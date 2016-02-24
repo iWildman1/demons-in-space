@@ -1,7 +1,6 @@
 Parse.initialize("Vpxoii1PVC5UN5TtB3tCo74L5aBKJ2QN52bvxKHr", "UWzLmztcGnF1JjuBkz8WW0UYnY02M5PTDgtAFIka");
 
 var IPAddress;
-votingEnabled = true;
 
 $(document).ready(function() {
   $.ajax({
@@ -10,13 +9,11 @@ $(document).ready(function() {
       IPAddress = result.ip;
 
       if (IPAddress === undefined) {
-        votingEnabled = false;
         console.log("Failed to obtain IP Address. Voting disabled.")
       }
     },
     error: function() {
       console.log("Failed to retrieve IP. Voting disabled.");
-      votingEnabled = false;
     }
   });
 });
@@ -41,8 +38,7 @@ function addVote(teamName) {
       vote.set("expirationDate", d);
       vote.set("requestIP", IPAddress);
 
-      if (votingEnabled) {
-        votingEnabled = false;
+      if (true) {
 
         vote.save(null, {
           success: function(vote) {
