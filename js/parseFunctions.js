@@ -45,11 +45,11 @@ function addVote(teamName) {
             swal("Success!", "Your vote has been counted!", "success");
           },
           error: function(error) {
-            swal("Woah there!", "You can only vote once every 15 minutes. Come back soon!", "error");
+            swal("Oh no!", "The Demons in Space ship is currently landing. Voting is no longer available", "error");
           }
         });
       } else {
-        swal("Woah there!", "You can only vote once every 15 minutes. Come back soon!", "error");
+        swal("Oh no!", "The Demons in Space ship is currently landing. Voting is no longer available", "error");
       }
     },
     error: function(error) {
